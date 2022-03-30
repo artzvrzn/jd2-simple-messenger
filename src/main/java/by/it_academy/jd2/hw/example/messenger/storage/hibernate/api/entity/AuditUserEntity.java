@@ -1,7 +1,5 @@
 package by.it_academy.jd2.hw.example.messenger.storage.hibernate.api.entity;
 
-import by.it_academy.jd2.hw.example.messenger.model.User;
-
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
