@@ -1,7 +1,7 @@
 package by.it_academy.jd2.hw.example.messenger.view;
 
 import by.it_academy.jd2.hw.example.messenger.model.User;
-import by.it_academy.jd2.hw.example.messenger.storage.db.DBUserStorage;
+import by.it_academy.jd2.hw.example.messenger.storage.Storage;
 import by.it_academy.jd2.hw.example.messenger.storage.api.IUserStorage;
 import by.it_academy.jd2.hw.example.messenger.view.api.IUserService;
 
@@ -15,7 +15,7 @@ public class UserService implements IUserService {
     private final IUserStorage userStorage;
 
     private UserService() {
-        this.userStorage = DBUserStorage.getInstance();
+        this.userStorage = Storage.getUserStorage();
     }
 
     @Override

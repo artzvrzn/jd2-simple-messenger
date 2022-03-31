@@ -2,6 +2,7 @@ package by.it_academy.jd2.hw.example.messenger.storage.hibernate;
 
 import by.it_academy.jd2.hw.example.messenger.model.Message;
 import by.it_academy.jd2.hw.example.messenger.storage.api.IChatStorage;
+import by.it_academy.jd2.hw.example.messenger.storage.hibernate.api.HibernateEntityFactoryInit;
 import by.it_academy.jd2.hw.example.messenger.storage.hibernate.api.entity.MessageEntity;
 import org.modelmapper.ModelMapper;
 
@@ -16,6 +17,7 @@ import java.util.stream.Collectors;
 
 public class HnateChatStorage implements IChatStorage, CommonQueries<MessageEntity> {
 
+    private static IChatStorage INSTANCE;
     private final EntityManagerFactory managerFactory;
     private final ModelMapper mapper;
 
@@ -64,5 +66,16 @@ public class HnateChatStorage implements IChatStorage, CommonQueries<MessageEnti
         manager.getTransaction().commit();
         manager.close();
         return count;
+    }
+
+    public static IChatStorage getInstance() {
+        if (INSTANCE == null) {
+            synchronized (HnateAuditUserStorage.class) {
+                if (INSTANCE == null) {
+                    INSTANCE = new HnateChatStorage();
+                }
+            }
+        }
+        return INSTANCE;
     }
 }

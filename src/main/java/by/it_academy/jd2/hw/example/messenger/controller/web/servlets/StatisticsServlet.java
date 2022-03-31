@@ -1,5 +1,6 @@
 package by.it_academy.jd2.hw.example.messenger.controller.web.servlets;
 
+import by.it_academy.jd2.hw.example.messenger.storage.Storage;
 import by.it_academy.jd2.hw.example.messenger.storage.db.DBAuditStorage;
 import by.it_academy.jd2.hw.example.messenger.storage.api.IAuditStorage;
 import by.it_academy.jd2.hw.example.messenger.view.StatisticsService;
@@ -17,11 +18,9 @@ import java.nio.charset.StandardCharsets;
 public class StatisticsServlet extends HttpServlet {
 
     private final IStatisticsService statisticsService;
-    private final IAuditStorage auditStorage;
 
     public StatisticsServlet() {
         this.statisticsService = StatisticsService.getInstance();
-        this.auditStorage = DBAuditStorage.getInstance();
     }
 
     @Override
@@ -30,8 +29,6 @@ public class StatisticsServlet extends HttpServlet {
         resp.setContentType("text/html; charset=UTF-8");
 
         req.setAttribute("stats", statisticsService.getStats());
-        req.setAttribute("audit", auditStorage.read());
-
 
         req.getRequestDispatcher("/views/statistics.jsp").forward(req, resp);
     }

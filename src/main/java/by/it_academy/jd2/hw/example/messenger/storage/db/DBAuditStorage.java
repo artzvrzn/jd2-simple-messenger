@@ -3,6 +3,7 @@ package by.it_academy.jd2.hw.example.messenger.storage.db;
 import by.it_academy.jd2.hw.example.messenger.model.User;
 import by.it_academy.jd2.hw.example.messenger.model.audit.AuditUser;
 import by.it_academy.jd2.hw.example.messenger.storage.api.IAuditStorage;
+import by.it_academy.jd2.hw.example.messenger.storage.db.api.DBInitializer;
 
 import javax.sql.DataSource;
 import java.sql.*;

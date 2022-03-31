@@ -17,6 +17,7 @@
             			var="message">
                 <tr>
                     <td width="20%">${message.from}</td>
+                    <td width="20%">${message.to}</td>
                     <td width="20%">${message.sendDate}</td>
                     <td width="60%"><c:out value="${message.text}" escapeXml="true"/></td>
                 </tr>

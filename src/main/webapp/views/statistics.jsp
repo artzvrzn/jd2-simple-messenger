@@ -22,7 +22,6 @@
             </c:forEach>
             </tbody>
         </table>
-        ${audit}
         <p><input type="button" onclick="location.href='${pageContext.request.contextPath}/';" value="index" /></p>
     </body>
 </html>

@@ -1,4 +1,4 @@
-package by.it_academy.jd2.hw.example.messenger.storage.hibernate;
+package by.it_academy.jd2.hw.example.messenger.storage.hibernate.api;
 
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;

@@ -1,4 +1,4 @@
-package by.it_academy.jd2.hw.example.messenger.storage.db;
+package by.it_academy.jd2.hw.example.messenger.storage.db.api;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 

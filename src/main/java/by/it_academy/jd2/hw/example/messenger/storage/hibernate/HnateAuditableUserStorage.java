@@ -1,6 +1,7 @@
 package by.it_academy.jd2.hw.example.messenger.storage.hibernate;
 
 import by.it_academy.jd2.hw.example.messenger.storage.api.IUserStorage;
+import by.it_academy.jd2.hw.example.messenger.storage.hibernate.api.HibernateEntityFactoryInit;
 import by.it_academy.jd2.hw.example.messenger.storage.hibernate.api.entity.AuditUserEntity;
 import by.it_academy.jd2.hw.example.messenger.storage.hibernate.api.entity.UserEntity;
 import org.modelmapper.ModelMapper;
